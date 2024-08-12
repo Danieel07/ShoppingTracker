@@ -1,16 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Shopping Tracker</title>
-<link rel="stylesheet" href="Estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppingTracker</title>
+    <link rel="stylesheet" href="Estilos.css">
 </head>
-
 <body>
-<h1>Shopping Tracker</h1>
-<p> <b> <i>Hola, en la pagina Web De Shopping Tracker podras llevar un mejor manejo de tus compras </i> </b></p>
-<h3>¿Usted es?</h3>
-<button>Cliente</button>
-<button>Asesor Comercial</button>
+    <header>
+        <h1>ShoppingTracker</h1>
+        <p>Crear y consultar compras</p>
+    </header>
+
+    <main>
+        <section id="crear-compra">
+            <h2>Crear Compra</h2>
+            <form>
+                <label for="nombreAlmacen">Nombre del Almacén:</label>
+                <input type="text" id="nombreAlmacen" name="nombreAlmacen" required>
+
+                <label for="marcaProducto">Marca del Producto:</label>
+                <input type="text" id="marcaProducto" name="marcaProducto" required>
+
+                <label for="tipoCompra">Tipo de Compra:</label>
+                <input type="text" id="tipoCompra" name="tipoCompra" required>
+
+                <label for="isRegalo">¿Es un regalo?</label>
+                <input type="checkbox" id="isRegalo" name="isRegalo">
+
+                <label for="cedulaCliente">Cédula del Cliente:</label>
+                <input type="text" id="cedulaCliente" name="cedulaCliente" required>
+
+                <label for="nombreCliente">Nombre del Cliente:</label>
+                <input type="text" id="nombreCliente" name="nombreCliente" required>
+
+                <button type="submit">Crear Compra</button>
+            </form>
+        </section>
+
+        <section id="consultar-compra">
+            <h2>Consultar Compras</h2>
+            <label for="CedulaClienteBusqueda">Cedula del Cliente que desea realizar la busqueda:</label>
+            <input type="text" id="CedulaClienteBusqueda" name="CedulaClienteBusqueda" required>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre del Almacén</th>
+                        <th>Marca del Producto</th>
+                        <th>Tipo de Compra</th>
+                        <th>¿Es un regalo?</th>
+                        <th>Cédula del Cliente</th>
+                        <th>Nombre del Cliente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán las compras -->
+                    <tr>
+                        <td>Ejemplo Almacén</td>
+                        <td>Marca X</td>
+                        <td>Compra en Línea</td>
+                        <td>No</td>
+                        <td>123456789</td>
+                        <td>Juan Pérez</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </body>
 </html>
